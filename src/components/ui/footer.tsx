@@ -66,8 +66,10 @@ const Footer: React.FC = () => {
     if (!hasError) {
 
       try {
-        const webhookUrl : string | undefined = process.env.WEBHOOK_URL ?? '';
-        await axios.post(webhookUrl, {
+        const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL ?? '';
+        // console.log( "url: ",webhookUrl)
+
+        await axios.post('/api/sendMessage', {
           content: `New feedback from ${form.email}:\n${form.plan}:\n${form.description}\n\n`,
         });
 
@@ -141,9 +143,9 @@ const Footer: React.FC = () => {
       <AnimatePresence initial={false} mode='wait'>
       {isSubmitted && 
   <motion.div 
-  initial ={{background:'black', opacity:0}}
+  initial ={{ opacity:0}}
   animate = {{background: "rgba(34, 34, 34, 0.75)", opacity:1}}
-  exit ={{background:'black', opacity:0}}
+  exit ={{ opacity:0}}
 
   className='fixed inset-0 flex justify-center items-center '>
     <motion.div 
