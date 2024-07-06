@@ -158,7 +158,8 @@ const Footer: React.FC = () => {
         Thank you for getting in touch with us. We'll send you an email with further details once we've confirmed your request.
       </p>
       <div className='flex justify-center mt-4'>
-        <Button onClick={() => setIsSubmitted(false)}  >Done</Button>
+        <Button onClick={() => setIsSubmitted(false)}          className="bg-black text-white border-slate-800 text-lg  "
+>Done</Button>
       </div>
     </motion.div>
   </motion.div>

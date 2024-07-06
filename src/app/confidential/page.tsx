@@ -77,7 +77,7 @@ const Confidential: React.FC<ComponentNameProps> = ({  }) => {
       </div>
       <Link href={"/"}>
       <Button
-              className="bg-white dark:bg-black text-neutral-300 dark:text-white border-neutral-200 dark:border-slate-800 text-lg  "
+        className="bg-black text-white border-slate-800 text-lg  "
 
       >Go Back</Button>
       </Link>
