@@ -64,8 +64,10 @@ const Footer: React.FC = () => {
     }
 
     if (!hasError) {
+
       try {
-        await axios.post('https://discordapp.com/api/webhooks/1258992236838916189/PsiMfORgC13RHE5bM9bNzZmevSC3iabqcgTGWmbNBzOxPi8XNKrcMI2-C-j7S4F8i7ir', {
+        const webhookUrl : string | undefined = process.env.WEBHOOK_URL ?? '';
+        await axios.post(webhookUrl, {
           content: `New feedback from ${form.email}:\n${form.plan}:\n${form.description}\n\n`,
         });
 
