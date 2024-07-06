@@ -48,7 +48,7 @@ const HeroSection: React.FC<ComponentNameProps> = ({  }) => {
   <Link href={"/confidential"}>
      <Button
         borderRadius="10.75rem"
-        className="bg-white dark:bg-black text-neutral-300 dark:text-white border-neutral-200 dark:border-slate-800 text-lg  "
+        className="bg-black text-white border-slate-800 text-lg  "
       >
        Conditions 
          
