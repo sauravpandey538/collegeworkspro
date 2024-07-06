@@ -34,7 +34,7 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({  }) => {
        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl   '>
           THINK LIKE A KING <span className='inline-flex text-white items-center pl-3'><FaChessKing/> </span>
         </h1>  
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 py-3">
+        <p className="text-sm text-neutral-600  py-3">
   @The King don't work by himself. He makes other to do his stuffs.
 </p>
 </div>
@@ -45,16 +45,16 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({  }) => {
 services.map((service)=> 
 <Link href={`/${service.url}`}key={service.id}>
 
-<BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10  dark:bg-zinc-900" >
+<BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10  bg-zinc-900" >
 
-<p className="text-base sm:text-xl  mt-4 mb-2 dark:text-neutral-200">
+<p className="text-base sm:text-xl  mt-4 mb-2 text-neutral-200">
   {service.name}
 </p>
 
-<p className="text-sm  dark:text-neutral-400">
+<p className="text-sm  text-neutral-400">
   {service.about}
 </p>
-<button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold dark:bg-zinc-800">
+<button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
   <span>Starter Package --{">"} </span>
   <span className="bg-zinc-700 rounded-full text-[0.8rem] px-2 py-0 text-white">
     Nrs {service.initialCost}
