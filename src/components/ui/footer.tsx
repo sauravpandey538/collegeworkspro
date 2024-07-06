@@ -3,7 +3,7 @@ import axios from 'axios';
 import MySimpleBtn from '@/utils/mySimpleBtn';
 import React, { useState } from 'react';
 import { SiMinutemailer } from 'react-icons/si';
-import { FaUserFriends } from 'react-icons/fa';
+import { BiSolidHappyAlt } from "react-icons/bi";
 import { Button } from './moving-border';
 import { motion, AnimatePresence } from 'framer-motion';
 interface Form {
@@ -90,11 +90,16 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <div className='h-svh w-full bg-black flex flex-wrap justify-center items-center'>
-      <div className='flex flex-col justify-center sm:gap-6 max-w-96 w-full p-4'>
-        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl text-center inline-flex items-center'>
-          LET'S CONNECT <span className='inline-flex text-gray-200 items-center pl-3'><FaUserFriends /> </span>
-        </h1>
+    <div className='max-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center pt-10'>
+        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl text-center items-center px-6'>
+    Share your plan with us, and we'll handle the execution for you. 
+    {/* <span className='inline-flex items-center pl-2'>
+    
+      <BiSolidHappyAlt className='text-gray-200 text-2xl md:text-5xl md:pt-4' />
+    </span> */}
+  </h1>
+      <div className='flex flex-col justify-center sm:gap-6 max-w-96 w-full p-12'>
+        
         <form onSubmit={handleFormClick} className='w-full'>
           <input
             value={form.email}
@@ -127,14 +132,15 @@ const Footer: React.FC = () => {
         </form>
       </div>
 
-      <div className='flex flex-col justify-evenly w-full p-4'>
-        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-md md:text-xl text-center border py-3 rounded-2xl'>
-          SPECIAL THANKS TO{' '}
+      <div className='flex flex-col justify-evenly w-full pt-4 '>
+        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-md  text-center  py-3 '>
+          PROUDLY MADE BY{' '}
           <span className='text-md md:text-2xl font-bold text-gray-200 tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center pl-2'>
-            Saurav Pandey
+            2'nd Semister
           </span>
         </h1>
       </div>
+      <p className=' text-sm text-neutral-600 w-full text-center'>© 2024 Copyright : collegeworkspro.vercel.app</p>
 
 
 

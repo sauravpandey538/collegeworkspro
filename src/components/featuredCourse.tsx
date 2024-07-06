@@ -21,7 +21,7 @@ const services = [
       "name": "Print Helper",
       "url":"printHelper",
 
-      "initialCost" : 179,
+      "initialCost" : 4,
       "about":"Welcome to CollegeWorksPro, your trusted source for high-quality, plagiarism-free assignments. We ensure clean, well-researched work tailored to your college requirements. For a small fee, we provide meticulously crafted, ready-to-print PDF assignments. Conveniently delivered at your preferred time, our service helps busy students meet deadlines effortlessly and confidently."
 
     }
