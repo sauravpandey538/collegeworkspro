@@ -3,6 +3,7 @@ import React from 'react';
 import { BackgroundGradient } from './ui/background-gradient';
 import Image from "next/image";
 import { FaChessKing } from "react-icons/fa6";
+import Link from 'next/link';
 
 interface ComponentNameProps {
   
@@ -11,12 +12,15 @@ const services = [
     {
       "id": 1,
       "name": "Assignment Helper",
+      "url":"assignmentHelper",
       'initialCost' : 199,
       "about" : 'Welcome to CollegeWorksPro, your reliable partner for high-quality, plagiarism-free assignments. We understand the importance of clean, well-researched work, and our team of experts is dedicated to delivering just that. For a small fee, we provide meticulously crafted, ready-to-print assignments, helping busy students meet their college requirements effortlessly and with confidence.'
     },
     {
       "id": 2,
       "name": "Print Helper",
+      "url":"printHelper",
+
       "initialCost" : 179,
       "about":"Welcome to CollegeWorksPro, your trusted source for high-quality, plagiarism-free assignments. We ensure clean, well-researched work tailored to your college requirements. For a small fee, we provide meticulously crafted, ready-to-print PDF assignments. Conveniently delivered at your preferred time, our service helps busy students meet deadlines effortlessly and confidently."
 
@@ -36,8 +40,13 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({  }) => {
 </div>
 
     <div className=' flex justify-evenly w-full flex-wrap px-5 gap-14'>
+
         {
-services.map((service)=> <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+services.map((service)=> 
+<Link href={`/${service.url}`}key={service.id}>
+
+<BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900" >
+
 <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
   {service.name}
 </p>
@@ -51,9 +60,12 @@ services.map((service)=> <BackgroundGradient className="rounded-[22px] max-w-sm 
     Nrs {service.initialCost}
   </span>
 </button>
-</BackgroundGradient>)
+
+</BackgroundGradient>
+</Link>
+)
         }
-       
+
     </div>
     </div>
   );

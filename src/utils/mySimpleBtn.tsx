@@ -10,14 +10,16 @@ interface ComponentNameProps {
   onClick?: ()=> void;
   useHover?: boolean
   className?:string
+  type?: 'submit'
 }
 
-const MySimpleBtn: React.FC<ComponentNameProps> = ({ text, LeftIcon, RightIcon, onClick,useHover, className}) => {
+const MySimpleBtn: React.FC<ComponentNameProps> = ({ text, LeftIcon, RightIcon, onClick,useHover, className, type}) => {
   const [open, setOpen] = useState(false)
   
   return (
     <div className='relative'>
     <button  
+    type={type}
     onClick={onClick} 
     onMouseEnter={()=> setOpen(true)}
     onMouseLeave={()=> setOpen(false)}

@@ -18,6 +18,7 @@ export function Button({
   borderClassName,
   duration,
   className,
+  onClick,
   ...otherProps
 }: {
   borderRadius?: string;
@@ -27,11 +28,13 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  onClick?: ()=> void;
   [key: string]: any;
 }) {
   return (
     <Component
-      className={cn(
+    onClick={onClick}
+    className={cn(
         "bg-transparent relative text-xl  h-16 w-40 p-[1px] overflow-hidden ",
         containerClassName
       )}
@@ -41,6 +44,7 @@ export function Button({
       {...otherProps}
     >
       <div
+      onClick={onClick}
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >

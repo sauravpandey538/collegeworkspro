@@ -6,6 +6,7 @@ import { FaRegLightbulb } from "react-icons/fa6";
 import { BsFillLightbulbOffFill } from "react-icons/bs";
 
 import MySimpleBtn from '@/utils/mySimpleBtn';
+import Link from 'next/link';
 interface ComponentNameProps {
   
 }
@@ -44,12 +45,15 @@ const HeroSection: React.FC<ComponentNameProps> = ({  }) => {
   
 
   <div className='mt-9 '>
+  <Link href={"/confidential"}>
      <Button
         borderRadius="10.75rem"
         className="bg-white dark:bg-black text-neutral-300 dark:text-white border-neutral-200 dark:border-slate-800 text-lg  "
       >
-        Conditions  
+       Conditions 
+         
       </Button>
+      </Link>
 </div>
 
 
