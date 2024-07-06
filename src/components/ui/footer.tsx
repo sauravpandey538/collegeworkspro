@@ -90,15 +90,11 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <div className='max-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center pt-10'>
+    <div className='max-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center py-20'>
         <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl text-center items-center px-6'>
-    Share your plan with us, and we'll handle the execution for you. 
-    {/* <span className='inline-flex items-center pl-2'>
-    
-      <BiSolidHappyAlt className='text-gray-200 text-2xl md:text-5xl md:pt-4' />
-    </span> */}
+        PLEASE PROVIDE A DETAILED DESCRIPTION OF YOUR ASSIGNMENT NEEDS.       
   </h1>
-      <div className='flex flex-col justify-center sm:gap-6 max-w-96 w-full p-12'>
+      <div className='flex flex-col justify-center sm:gap-6 max-w-lg w-full p-12'>
         
         <form onSubmit={handleFormClick} className='w-full'>
           <input
@@ -123,7 +119,7 @@ const Footer: React.FC = () => {
             value={form.description}
             name='description'
             onChange={handleChange}
-            placeholder='Enter your message kindly'
+            placeholder='Enter your description kindly'
             className='border-gray-600 border-b-2 bg-black p-2 max-h-96 w-full mt-10 focus:outline-none'
           ></textarea>
           {error.description && <p className='text-red-500 text-sm'>{error.description}</p>}

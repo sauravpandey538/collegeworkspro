@@ -34,6 +34,12 @@ const config: Config = {
           },
         },
       },
+      colors : {
+        decription : 'neutral-400',
+        title : 'neutral-200',
+         bin : 'neutral-600'
+
+      }
     },
   },
   plugins: [addVariablesForColors,],

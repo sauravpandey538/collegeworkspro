@@ -15,10 +15,10 @@ const HeroSection: React.FC<ComponentNameProps> = ({  }) => {
   const [open,setOpen] = useState(true)
   return (
 
-    <div className='relative flex flex-col justify-evenly items-center  h-screen  w-full text-center overflow-hidden'>
+    <div className='relative flex flex-col justify-center items-center  h-screen  w-full text-center overflow-hidden '>
       <MySimpleBtn  LeftIcon={open ? BsFillLightbulbOffFill : FaRegLightbulb} onClick={()=> setOpen(!open)} className='fixed top-20 left-0 z-50 text-black rounded-full'/>
       {open &&   <Spotlight
-        className=" fixed -top-40 left-0 md:left-60 md:-top-20"
+        className=" fixed -top-24 left-0 md:left-60 md:-top-20"
         fill="white"
       /> }
     
@@ -26,17 +26,19 @@ const HeroSection: React.FC<ComponentNameProps> = ({  }) => {
 <div 
    >
  <h1
-    className=' text-4xl md:text-7xl font-bold  tracking-wide  my-10  bg-clip-text text-transparent
-    bg-gradient-to-b from-neutral-50 to-neutral-400 
+    className=' text-4xl md:text-5xl font-bold  tracking-wide  my-10  bg-clip-text text-transparent
+    bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-4xl w-full
     '
-> Master the Art of Cheating  </h1>
+>  EXPERTLY CRAFTED ASSIGNMENTS TAILORED TO YOUR NEEDS  </h1>
   
   
-        <p className='text-neutral-600 mt-4 font-normal text-base md:text-lg max-w-lg mx-auto px-3'>
+        <p className='tracking-wide  mt-10  bg-clip-text text-transparent 
+    bg-gradient-to-b from-neutral-50 to-neutral-400  font-normal text-base md:text-lg max-w-lg mx-auto px-3'>
 
         "Welcome to CollegeWorksPro, the ultimate solution for busy students needing assignment help. For a reasonable fee, we provide expertly crafted, ready-to-print assignments tailored to your college requirements. Save time and ensure quality with our professional services, designed to make your academic life easier."  
         </p>
-        <p className='text-neutral-600 mt-4 font-normal text-base md:text-lg max-w-lg mx-auto px-3 text-end'>
+        <p className='bg-clip-text text-transparent 
+    bg-gradient-to-b from-neutral-50 to-neutral-400   mt-2 font-normal text-base md:text-lg max-w-lg mx-auto px-3 text-end'>
           - Website Designer 
 </p>
 
@@ -50,7 +52,7 @@ const HeroSection: React.FC<ComponentNameProps> = ({  }) => {
         borderRadius="10.75rem"
         className="bg-black text-white border-slate-800 text-lg  "
       >
-       Conditions 
+       Read Terms 
          
       </Button>
       </Link>
