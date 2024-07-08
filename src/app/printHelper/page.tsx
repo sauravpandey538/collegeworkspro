@@ -51,7 +51,7 @@ const projects = [
 
 const PrintHelp: React.FC<ComponentNameProps> = ({ }) => {
   return (
-    <div className="max-w-5xl mx-auto px-8 mt-24 md:mt-60 flex flex-col justify-center items-center">
+    <div className="max-w-5xl mx-auto px-8 mt-24 md:mt-60 flex flex-col justify-center items-center py-28">
       <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl   '>
         KNOW YOUR BEST PLAN
       </h1>

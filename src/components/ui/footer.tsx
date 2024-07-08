@@ -145,6 +145,8 @@ const Footer: React.FC = () => {
         </form>
       </div>
 
+
+
       <div className='flex flex-col justify-evenly w-full  '>
         <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-md  text-center  py-3 '>
           PROUDLY MADE BY{' '}
@@ -154,7 +156,9 @@ const Footer: React.FC = () => {
         </h1>
       </div>
       <p className=' text-sm text-neutral-600 w-full text-center'>© 2024 Copyright : collegeworkspro.vercel.app</p>
-
+      <p className="text-sm text-neutral-600  py-2">
+        For inquiries, please contact us at collegeworkspro@gmail.com !
+      </p>
 
 
 

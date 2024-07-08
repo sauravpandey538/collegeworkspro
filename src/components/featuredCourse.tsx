@@ -22,7 +22,7 @@ const services = [
     "id": 2,
     "name": "Assignment Helper",
     "url": "assignmentHelper",
-    'initialCost': 199,
+    'initialCost': 99,
     "about": 'Welcome to CollegeWorksPro, your reliable partner for high-quality, plagiarism-free assignments. We understand the importance of clean, well-researched work, and our team of experts is dedicated to delivering just that. For a small fee, we provide meticulously crafted, ready-to-print assignments, helping busy students meet their college requirements effortlessly and with confidence.'
   },
   {
