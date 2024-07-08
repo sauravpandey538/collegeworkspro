@@ -6,6 +6,9 @@ import { SiMinutemailer } from 'react-icons/si';
 import { BiSolidHappyAlt } from "react-icons/bi";
 import { Button } from './moving-border';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NoteText } from '@/utils/note';
+import { Topic } from '@/utils/topic';
+import { MyAnimatedBtn } from '@/utils/myBtn';
 interface Form {
   email: string;
   plan: string;
@@ -91,16 +94,13 @@ const Footer: React.FC = () => {
 
   return (
     <div className='min-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center py-20'>
-      <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl text-center items-center px-6'>
+
+      <Topic>
         PLEASE PROVIDE A DETAILED DESCRIPTION OF YOUR ASSIGNMENT NEEDS.
-      </h1>
-      <p className="text-sm text-neutral-600  py-6">
-        @Note: Make sure to enter your email correctly!
 
+      </Topic>
 
-
-
-      </p>
+      <NoteText className='py-4'> @Note: Make sure to enter your email correctly! </NoteText>
       <div className='flex items-center justify-center sm:gap-6 max-w-lg w-full p-3 md:p-12 h-auto'>
 
         <form onSubmit={handleFormClick} className='w-full'>
@@ -155,10 +155,17 @@ const Footer: React.FC = () => {
           </span>
         </h1>
       </div>
-      <p className=' text-sm text-neutral-600 w-full text-center'>© 2024 Copyright : collegeworkspro.vercel.app</p>
-      <p className="text-sm text-neutral-600  py-2">
-        For inquiries, please contact us at collegeworkspro@gmail.com !
-      </p>
+      <div className='flex justify-center items-center flex-col w-full '>
+
+        <NoteText className='text-center'>
+          © 2024 Copyright : collegeworkspro.vercel.app
+        </NoteText>
+        <NoteText className=' text-center'>
+          For inquiries, please contact us at  collegeworkspro@gmail.com !
+
+        </NoteText>
+      </div>
+
 
 
 
@@ -181,8 +188,10 @@ const Footer: React.FC = () => {
                 Thank you for getting in touch with us. We'll send you an email with further details once we've confirmed your request.
               </p>
               <div className='flex justify-center mt-4'>
-                <Button onClick={() => setIsSubmitted(false)} className="bg-black text-white border-slate-800 text-lg  "
-                >Done</Button>
+
+                <MyAnimatedBtn
+                  onClick={() => setIsSubmitted(false)}
+                >Done</MyAnimatedBtn>
               </div>
             </motion.div>
           </motion.div>

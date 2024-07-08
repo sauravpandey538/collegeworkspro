@@ -4,6 +4,10 @@ import { BackgroundGradient } from './ui/background-gradient';
 import Image from "next/image";
 import { FaChessKing } from "react-icons/fa6";
 import Link from 'next/link';
+import { NoteText } from '@/utils/note';
+import { Description } from '@/utils/description';
+import { Topic } from '@/utils/topic';
+import { DescriptionTitle } from '@/utils/descriptionTitle';
 
 interface ComponentNameProps {
 
@@ -41,12 +45,15 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({ }) => {
   return (
     <div className=' min-h-screen bg-slate-900 flex flex-col w-screen  justify-evenly items-center overflow-hidden py-20'  >
       <div className='flex flex-col w-full text-center'>
-        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl   '>
-          CHOOSE YOUR BEST PLAN <span className='inline-flex text-white items-center pl-3'><FaChessKing /> </span>
-        </h1>
-        <p className="text-sm text-neutral-600  py-3">
+
+        <Topic> CHOOSE YOUR BEST PLAN
+          <span className='inline-flex text-white items-center pl-3'><FaChessKing /> </span>
+        </Topic>
+
+        <NoteText className='py-3'>
           @Note : Event's are not clickable
-        </p>
+
+        </NoteText>
       </div>
 
       <div className=' flex justify-evenly w-full flex-wrap px-5 gap-14'>
@@ -58,13 +65,9 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({ }) => {
               <BackgroundGradient
                 className=" relative rounded-[22px] max-w-sm p-4 sm:p-10  bg-zinc-900 " >
 
-                <p className="text-base sm:text-xl  mt-4 mb-2 text-neutral-200">
-                  {service.name}
-                </p>
 
-                <p className="text-sm  text-neutral-400">
-                  {service.about}
-                </p>
+                <DescriptionTitle>{service.name}</DescriptionTitle>
+                <Description>{service.about}</Description>
                 {service.id !== 1 &&
 
                   <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">

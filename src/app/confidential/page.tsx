@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/moving-border';
+import { MyAnimatedBtn } from '@/utils/myBtn';
 import Link from 'next/link';
 import React from 'react';
 
@@ -79,10 +80,8 @@ const Confidential: React.FC<ComponentNameProps> = ({ }) => {
         }
       </div>
       <Link href={"/"}>
-        <Button
-          className="bg-black text-white border-slate-800 text-lg  "
 
-        >Go Back</Button>
+        <MyAnimatedBtn>Go Back</MyAnimatedBtn>
       </Link>
     </div>
   );

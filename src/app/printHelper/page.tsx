@@ -2,6 +2,8 @@ import React from 'react';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import Link from 'next/link';
 import { Button } from '@/components/ui/moving-border';
+import { Topic } from '@/utils/topic';
+import { MyAnimatedBtn } from '@/utils/myBtn';
 
 interface ComponentNameProps {
 
@@ -52,15 +54,11 @@ const projects = [
 const PrintHelp: React.FC<ComponentNameProps> = ({ }) => {
   return (
     <div className="max-w-5xl mx-auto px-8 mt-24 md:mt-60 flex flex-col justify-center items-center py-28">
-      <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl   '>
-        KNOW YOUR BEST PLAN
-      </h1>
+
+      <Topic> KNOW YOUR BEST PLAN</Topic>
       <HoverEffect items={projects} />
       <Link href={"/"}>
-        <Button
-          className="bg-black text-white border-slate-800 text-lg  "
-
-        >Go Back</Button>
+        <MyAnimatedBtn>Go Back</MyAnimatedBtn>
       </Link>
     </div>
   );

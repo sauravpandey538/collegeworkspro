@@ -7,11 +7,13 @@ import { BsFillLightbulbOffFill } from "react-icons/bs";
 
 import MySimpleBtn from '@/utils/mySimpleBtn';
 import Link from 'next/link';
-interface ComponentNameProps {
+import { NoteText } from '@/utils/note';
+import { MainHeader } from '@/utils/mainHeader';
+import { SecondaryHeading } from '@/utils/secondaryHeading';
+import { DescriptionTitle } from '@/utils/descriptionTitle';
+import { MyAnimatedBtn } from '@/utils/myBtn';
 
-}
-
-const HeroSection: React.FC<ComponentNameProps> = ({ }) => {
+const HeroSection: React.FC = () => {
   const [open, setOpen] = useState(true)
   return (
 
@@ -23,52 +25,27 @@ const HeroSection: React.FC<ComponentNameProps> = ({ }) => {
       />}
 
 
-      <div
-      >
-        <h1
-          className=' text-4xl md:text-5xl font-bold  tracking-wide  my-10  bg-clip-text text-transparent
-    bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-4xl w-full
-    '
-        >  EXPERTLY CRAFTED ASSIGNMENTS TAILORED TO YOUR NEEDS  </h1>
-
-
-        <p className='tracking-wide  mt-10  bg-clip-text text-transparent 
-    bg-gradient-to-b from-neutral-50 to-neutral-400  font-normal text-base md:text-lg max-w-lg mx-auto px-3'>
-
-          "Welcome to CollegeWorksPro, the ultimate solution for busy students needing assignment help. For a reasonable fee, we provide expertly crafted, ready-to-print assignments tailored to your college requirements. Save time and ensure quality with our professional services, designed to make your academic life easier."
-        </p>
-        <p className='bg-clip-text text-transparent 
-    bg-gradient-to-b from-neutral-50 to-neutral-400   mt-2 font-normal text-base md:text-lg max-w-lg mx-auto px-3 text-end'>
-          - @Admin
-        </p>
-
-
+      <div>
+        <MainHeader> EXPERTLY CRAFTED ASSIGNMENTS TAILORED TO YOUR NEEDS</MainHeader>
+        <SecondaryHeading> "Welcome to CollegeWorksPro, the ultimate solution for busy students needing assignment help.
+          For a reasonable fee, we provide expertly crafted, ready-to-print assignments tailored to your college requirements.
+          Save time and ensure quality with our professional services, designed to make your academic life easier."
+        </SecondaryHeading>
+        <DescriptionTitle className='w-full text-end  px-8 md:px-32 '>- @Admin</DescriptionTitle>
       </div>
-
 
       <div className='mt-9 '>
         <Link href={"/confidential"}>
-          <Button
-            borderRadius="10.75rem"
-            className="bg-black text-white border-slate-800 text-lg  "
-          >
-            Read Terms
 
-          </Button>
+          <MyAnimatedBtn>Read Terms</MyAnimatedBtn>
         </Link>
       </div>
 
-      <p className="text-sm text-neutral-600  py-6">
-        @Note: Make sure to review the terms and conditions before using any services!
 
-
-
-
-      </p>
+      <NoteText className='mt-6 mb-6'> @Note: Make sure to review the terms and conditions before using any services!</NoteText>
 
     </div>
   );
 };
 
 export default HeroSection;
-//    className='border-white border-2 h-auto md:h-[40rem]'
