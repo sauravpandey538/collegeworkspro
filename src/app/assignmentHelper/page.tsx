@@ -8,42 +8,37 @@ interface ComponentNameProps {
 }
 const projects = [
   {
-    title: "Plan A - Free Trial",
-    description:
-      "New to collegeWorksPro ? No worries, we're here to serve you this free service for your very first time. This offer will be limited to three lucky students only selected via lucky draw.",
-    price: "Free.",
+    "title": "Plan A - First Trial",
+    "description": "New to CollegeWorksPro? No worries, we're offering our very first service at a minimal price.",
+    "price": "99."
   },
   {
-    title: "Plan B - Already Connected",
-    description:
-      " Since you got free trial, enjoy a friendly budget service with us. This offer exists for one time only.",
-    price: "199.",
+    "title": "Plan B - Second Trial",
+    "description": "Since you've already tried our first trial, enjoy a second-phase trial. This offer is available only once.",
+    "price": "199."
   },
   {
-    title: "Plan C - Obessed With CollegeWorksPro",
-    description:
-      " Looks like you are obessed with our services. This will be your regular price after selecting PlanB already.",
-    price: "300.",
+    "title": "Plan C - Regular",
+    "description": "If you've become a fan of our services after trying Plan B, this will be your regular price.",
+    "price": "299."
   },
   {
-    title: "Plan D - A Package",
-    description:
-      "You got a task to do ? We will write down all your complete 5 subject's college assignment problem.",
-    price: "1200.",
+    "title": "Plan D - Package Deal",
+    "description": "Got a lot on your plate? We'll tackle all your college assignments for 5 subjects.",
+    "price": "1199."
   },
   {
-    title: "Plan E - Long-Package ",
-    description:
-      "Enjoy you job and make your CV better with good job experience. We will do all your semister assignment",
-    price: "2199.",
+    "title": "Plan E - Comprehensive Package",
+    "description": "Focus on your job and enhance your CV with valuable job experience while we handle all your semester assignments.",
+    "price": "2199."
   },
   {
-    title: "Plan F - Very Good Long Package",
-    description:
-      " College for degree, you don't need to think about any assignment in your student life. We'll do every single assignment for you.",
-    price: "Negotiable.",
-  },
-];
+    "title": "Plan F - Ultimate Long-Term Package",
+    "description": "Never worry about assignments again. We'll manage every assignment throughout your student life.",
+    "price": "Negotiable."
+  }
+]
+
 
 const AssignmentHelp: React.FC<ComponentNameProps> = ({ }) => {
   return (
@@ -52,7 +47,7 @@ const AssignmentHelp: React.FC<ComponentNameProps> = ({ }) => {
         KNOW YOUR BEST PLAN
       </h1>
       <p className="text-sm text-neutral-600  py-3">
-        @Note: The free trial is available for the first three students only. Plan-B is a one-time offer for each student, meaning you'll need to use Plan C for future services. For any queries, we'll explain via email!
+        @Note: The first trial and second trial  is available for the single time use only. So, you cant use those service for multiple times. For any queries, we'll explain via email!
       </p>
       <HoverEffect items={projects} />
       <Link href={"/"}>

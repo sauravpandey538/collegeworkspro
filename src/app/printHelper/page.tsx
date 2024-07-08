@@ -11,47 +11,41 @@ const projects = [
     id: 1,
     title: "WB - A - First Trial",
     description:
-      "Print your very first trial at just Nrs 4 Per Page count.",
-    //   price: "Free.",
+      "This offer is available only once. Print your very first trial for just Nrs 4 per page.",
   },
   {
     id: 2,
 
-    title: "WB - B - Already Connected",
+    title: "WB - B - Second Trial",
     description:
-      " Print your very first trial at just Nrs 4.5 Per Page count.",
-    //   price: "199.",
+      " This offer is available only once. Print your very first trial for just Nrs 4.5 Per Page count.",
   },
   {
     id: 3,
 
-    title: "WB - C - Obessed With CollegeWorksPro",
+    title: "WB - C - Regular",
     description:
-      " Print your very first trial at just Nrs 5 Per Page count.",
-    //   price: "300.",
+      " This will be your regular price. Print your very first trial for just Nrs 5 Per Page count.",
   },
   {
     id: 4,
-    title: "C - D - A Package",
+    title: "C - D -Regular",
     description:
       "  Print your single subjects colourful assignment at just Nrs 24 Per Page count.",
-    //   price: "1200.",
   },
   {
     id: 5,
 
-    title: "C - E - Long-Package ",
+    title: "C - E - Comprehensive Package ",
     description:
-      " Print your 5 subjects colourful assignment at just Nrs 21 Per Page count.",
-    //   price: "2199.",
+      " Print your 5 subjects colourful assignment for just Nrs 21 Per Page count.",
   },
   {
     id: 6,
 
-    title: "C - F - Very Good Long Package",
+    title: "C - F - Ultimate Long-Term Package",
     description:
-      "  Print your all semister colourful assignment at just Nrs 19 Per Page count.",
-    //   price: "Negotiable.",
+      "  Print your all semister colourful assignment for just Nrs 19 Per Page count.",
   },
 ];
 

@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
         // console.log( "url: ",webhookUrl)
 
         await axios.post('/api/sendMessage', {
-          content: `New feedback from ${form.email}:\n${form.plan}:\n${form.description}\n\n`,
+          content: `New request from ${form.email}:\n${form.plan}:\n${form.description}\n\n`,
         });
 
         // alert('Feedback submitted successfully!');
@@ -90,18 +90,25 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <div className='max-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center py-20'>
+    <div className='min-h-svh w-full bg-black flex flex-col flex-wrap justify-center items-center py-20'>
       <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-xl md:text-3xl text-center items-center px-6'>
         PLEASE PROVIDE A DETAILED DESCRIPTION OF YOUR ASSIGNMENT NEEDS.
       </h1>
-      <div className='flex flex-col justify-center sm:gap-6 max-w-lg w-full p-3 md:p-12'>
+      <p className="text-sm text-neutral-600  py-6">
+        @Note: Make sure to enter your email correctly!
 
-        <form onSubmit={handleFormClick} className='w-full '>
+
+
+
+      </p>
+      <div className='flex items-center justify-center sm:gap-6 max-w-lg w-full p-3 md:p-12 h-auto'>
+
+        <form onSubmit={handleFormClick} className='w-full'>
           <input
             value={form.email}
             name='email'
             onChange={handleChange}
-            placeholder='Enter your email'
+            placeholder='Enter your validate email'
             className='border-gray-600 border-b-2 bg-black p-2 mt-10 w-full focus:outline-none focus:bg-transparent'
           />
           {error.email && <p className='text-red-500 text-sm'>{error.email}</p>}
@@ -177,9 +184,9 @@ const Footer: React.FC = () => {
           </motion.div>
         }
       </AnimatePresence>
-
-
     </div>
+
+
   );
 };
 
