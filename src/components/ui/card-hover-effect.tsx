@@ -16,7 +16,7 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+  console.log(items)
   return (
     <div
       className={cn(
@@ -26,7 +26,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <Link
-        href={''}
+          href={''}
           key={item?.price}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -49,20 +49,23 @@ export const HoverEffect = ({
                 }}
               />
             )}
+
+
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-             {!item.price && <CardDescription>{item.description}</CardDescription>}
+            {!item.price && <CardDescription>{item.description}</CardDescription>}
 
 
-            {item.price &&     <CardDescription>{item.description} 
-            {item.price === 'Free.' && <>Enjoy this limited time offer for free of cost.</>}
-            {item.price === 'Negotiable.' && <> Price is negotiable. </>}
-           { (item.price !== 'Free.' && item.price !== 'Negotiable.') && <>Enjoy this offer for just Nrs {" "} {item.price}</>}
-            </CardDescription> }
-        
-            
+            {item.price && <CardDescription>{item.description}
+              {item.price === 'Free.' && <>Enjoy this limited time offer for free of cost.</>}
+              {item.price === 'Negotiable.' && <> Price is negotiable. </>}
+              {(item.price !== 'Free.' && item.price !== 'Negotiable.') && <>Enjoy this offer for just Nrs {" "} {item.price}</>}
+            </CardDescription>}
+
           </Card>
+
+
         </Link>
       ))}
     </div>
@@ -79,11 +82,11 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border  border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "  rounded-2xl h-full w-full p-4 overflow-hidden bg-black border  border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
-      <div className="relative z-50">
+      <div className="relative z-40">
         <div className="p-4">{children}</div>
       </div>
     </div>
