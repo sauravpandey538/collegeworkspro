@@ -124,11 +124,21 @@ const Footer: React.FC = () => {
           ></textarea>
           {error.description && <p className='text-red-500 text-sm'>{error.description}</p>}
 
-          <MySimpleBtn text='Send' LeftIcon={SiMinutemailer} className='text-black w-full mt-15' type='submit' />
+          {/* <MySimpleBtn text='Send' LeftIcon={SiMinutemailer} className='text-black w-full mt-15' type='submit' /> */}
+          <div
+            className=' flex justify-center items-center w-full mt-6'
+          >
+
+            <Button
+              className="bg-black text-white border-slate-800 text-lg  w-full "
+
+            > Send</Button>
+          </div>
+
         </form>
       </div>
 
-      <div className='flex flex-col justify-evenly w-full pt-4 '>
+      <div className='flex flex-col justify-evenly w-full  '>
         <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-md  text-center  py-3 '>
           PROUDLY MADE BY{' '}
           <span className='text-md md:text-2xl font-bold text-gray-200 tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center pl-2'>
