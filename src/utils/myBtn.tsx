@@ -12,7 +12,7 @@ export const MyAnimatedBtn: React.FC<NoteTextProps> = ({ className, children, on
     return (
         <Button
             onClick={onClick}
-            className="bg-black text-white border-slate-800 text-lg  "
+            className={twMerge("bg-black text-white border-slate-800 text-lg", className)}
         >
             {children}
         </Button>

@@ -18,8 +18,8 @@ const services = [
     "name": "Cisco Assignment",
     "url": "ciscoAssignment",
 
-    "initialCost": 399,
-    "about": " This package is for Netacad or CISCO assignment. We'll do all your assignment including both MCQS and PTSA. Just for Nrs 399 per module."
+    // "initialCost": 399,
+    "about": " This package is for Netacad or CISCO assignment. We'll do all your assignment including both MCQS and PTSA. Just for Nrs 399 per complete module or Nrs 249 per PTSA only."
 
   },
   {
@@ -65,8 +65,10 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({ }) => {
               <BackgroundGradient
                 className=" relative rounded-[22px] max-w-sm p-4 sm:p-10  bg-zinc-900 " >
 
-
-                <DescriptionTitle>{service.name}</DescriptionTitle>
+                {service.id === 1 ?
+                  <DescriptionTitle className='pt-8 sm:pt-0 '>{service.name}</DescriptionTitle> :
+                  <DescriptionTitle>{service.name}</DescriptionTitle>
+                }
                 <Description>{service.about}</Description>
                 {service.id !== 1 &&
 
@@ -78,7 +80,7 @@ const FeaturedCourse: React.FC<ComponentNameProps> = ({ }) => {
                   </button>
                 }
                 {service.id === 1 &&
-                  <p className='absolute w-fit bg-red-500 -top-3 -left-3 p-3 rounded-2xl transform -rotate-45 font-bold border-white border-2'>
+                  <p className='absolute w-fit bg-red-500 -top-3 -left-3 p-3 rounded-2xl transform -rotate-45 font-bold border-white border-2 '>
                     Event
                   </p>
                 }
